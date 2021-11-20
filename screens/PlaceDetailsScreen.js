@@ -5,14 +5,20 @@ import {
   Text
 } from 'react-native';
 
-const PlaceDetailsScreen = () => {
+const PlaceDetailsScreen = props => {
 
   return (
     <View>
       <Text>Details</Text>
     </View>
   );
-}
+};
+
+PlaceDetailsScreen.navigationOptions = navData => {
+  return {
+    headerTitle: navData.navigation.getParam('title')
+  };
+};
 
 const styles = StyleSheet.create({
   
