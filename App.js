@@ -6,6 +6,11 @@ import ReduxThunk from 'redux-thunk';
 
 import PlacesNavigator from './navigation/Navigator';
 import placesReducer from './store/places-reducer';
+import { init } from './helpers/db';
+
+init().then(() => {
+  console.log('Initaited');
+}).catch(err => console.log(err));
 
 enableScreens();
 
